@@ -1,0 +1,129 @@
+/* || RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background-color: black;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62, 5%;
+  scroll-behavior: smooth;
+  background-color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select,
+ul {
+  font-family: inherit;
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #222;
+}
+
+/* || VARIABLES*/
+
+:root {
+  --BGCOLOR: red;
+  --BORDER-COLOR: black;
+}
+
+/* || GENERAL STYLES */
+/* || UTILITIES */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* COLORS */
+
+.blue {
+  background-color: blue;
+}
+
+/* BEM */
+
+/* CONTAINER */
+
+.button {
+  margin: 2rem auto;
+  text-align: center;
+  display: block;
+  color: aliceblue;
+  background-color: darkslategray;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border: 2px solid rebeccapurple;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.container div {
+  height: 6.25%;
+  width: 6.25%;
+  border: 1px solid red;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  margin: 1rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* MEDIA */
+/* Small */
+@media (min-width: 576px) {
+}
+/* Medium */
+@media (min-width: 768px) {
+}
+/* Large */
+@media (min-width: 992px) {
+}
+/* X-Large */
+@media (min-width: 1200px) {
+}
