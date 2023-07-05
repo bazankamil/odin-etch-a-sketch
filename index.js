@@ -1,23 +1,24 @@
 // selectors
 const container = document.querySelector(".container");
 const button = document.querySelector(".button");
+let root = document.documentElement;
 
 //making - divs
 
-for (let i = 0; i < 16; i++) {
-  for (let j = 0; j < 16; j++) {
-    container.appendChild(document.createElement("div"));
+function makeCanvas(size = 16) {
+  if (size > 100) {
+    size = 100;
+  }
+  root.style.setProperty("--CANVAS-HEIGHT", 100 / size + "%");
+  root.style.setProperty("--CANVAS-WIDTH", 100 / size + "%");
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      container.appendChild(document.createElement("div"));
+    }
   }
 }
 
-/*selector - divs
-const divs = container.querySelectorAll("div");
-
-//listener - divs
-divs.forEach((div) => {
-  div.addEventListener(mouse);
-});
-*/
+makeCanvas();
 
 //listener container
 container.addEventListener("mouseover", (e) => {
@@ -26,8 +27,27 @@ container.addEventListener("mouseover", (e) => {
   container.style.backgroundColor = "black";
 });
 
-//listener
+//prompt
 
-//TODO: button dajacy prompt
-//prompt wchodzacy do petli ile na ile pixeli
-//
+button.addEventListener("click", (e) => {
+  let canvasSize = prompt("What size?");
+  container.innerHTML = "";
+  makeCanvas(canvasSize);
+});
+
+//TODO:
+
+//3 butony color picker eraser i pociemniacz i miejsce na suwak na dole
+
+//listener container w funkcji wywolywanej defaultowo
+//color picker - defaultowo aktywny i jesli aktywowany to maluje
+//eraser - tak samo jak malowanie, ale jesli jest klasa color to usuwa
+//kazde najechanie zmniejsza/zwieksza saturacje o 10% - tryb podobny, ale po najechaniu zmienia styl modyfikujac var i dodajac 10% pociemnienia
+
+//CSS
+//buttony
+//tytul
+//styl
+
+//zamiast prompt suwak
+//etch wewnatrz "okienka" tv albo innego obrazu
