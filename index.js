@@ -44,6 +44,10 @@ button.addEventListener("click", (e) => {
 //eraser - tak samo jak malowanie, ale jesli jest klasa color to usuwa
 //kazde najechanie zmniejsza/zwieksza saturacje o 10% - tryb podobny, ale po najechaniu zmienia styl modyfikujac var i dodajac 10% pociemnienia
 
+//zamiast zwyklego listenera - funkcja zmieniajaca defaultowo kolor na niebieski na mauseover, kolor picker wywoluje ze zmienionym kolorem
+//eraser wywoluje funkcje zmieniajaca background color na black, moze byc w tej samej funkcji
+//pociemniacz osobna funkcja uruchamiana buttonem zmieniajaca styl nie koloru tylko saturacji
+
 //CSS
 //buttony
 //tytul

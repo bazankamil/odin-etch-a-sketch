@@ -99,7 +99,8 @@ body {
 .container {
   width: 500px;
   height: 500px;
-  border: 2px solid rebeccapurple;
+  /* border: 2px solid rebeccapurple; */
+  background-color: black;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -108,7 +109,7 @@ body {
 .container div {
   height: var(--CANVAS-HEIGHT);
   width: var(--CANVAS-WIDTH);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* MENU */
