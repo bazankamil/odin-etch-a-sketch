@@ -2,6 +2,14 @@
 const container = document.querySelector(".container");
 const button = document.querySelector(".button");
 let root = document.documentElement;
+const colorPicker = document.querySelector(".menu__picker");
+const eraser = document.querySelector(".menu__eraser");
+
+//update color
+
+colorPicker.addEventListener("input", (e) => {
+  root.style.setProperty("--PICKED-COLOR", e.target.value);
+});
 
 //making - divs
 
@@ -22,9 +30,12 @@ makeCanvas();
 
 //listener container
 container.addEventListener("mouseover", (e) => {
-  e.target.style.backgroundColor = "blue";
+  e.target.style.backgroundColor = "var(--PICKED-COLOR)";
   e.stopPropagation();
   container.style.backgroundColor = "black";
+  if (eraserStatus == 1) {
+    e.target.style.backgroundColor = "black";
+  }
 });
 
 //prompt
@@ -35,23 +46,31 @@ button.addEventListener("click", (e) => {
   makeCanvas(canvasSize);
 });
 
+//eraser
+
+let eraserStatus = 0;
+
+eraser.addEventListener("click", (e) => {
+  if (eraserStatus == 0) {
+    eraserStatus = 1;
+  } else {
+    eraserStatus = 0;
+  }
+});
+
+//eraser on/off
+
+eraser.addEventListener("click", (e) => {
+  if (eraserStatus == 0) {
+    e.target.style.color = "aliceblue";
+  } else if (eraserStatus == 1) {
+    e.target.style.color = "yellow";
+  }
+  console.log(eraserStatus);
+});
 //TODO:
 
-//3 butony color picker eraser i pociemniacz i miejsce na suwak na dole
-
-//listener container w funkcji wywolywanej defaultowo
-//color picker - defaultowo aktywny i jesli aktywowany to maluje
-//eraser - tak samo jak malowanie, ale jesli jest klasa color to usuwa
 //kazde najechanie zmniejsza/zwieksza saturacje o 10% - tryb podobny, ale po najechaniu zmienia styl modyfikujac var i dodajac 10% pociemnienia
+//size jako input range
 
-//zamiast zwyklego listenera - funkcja zmieniajaca defaultowo kolor na niebieski na mauseover, kolor picker wywoluje ze zmienionym kolorem
-//eraser wywoluje funkcje zmieniajaca background color na black, moze byc w tej samej funkcji
-//pociemniacz osobna funkcja uruchamiana buttonem zmieniajaca styl nie koloru tylko saturacji
-
-//CSS
-//buttony
-//tytul
-//styl
-
-//zamiast prompt suwak
 //etch wewnatrz "okienka" tv albo innego obrazu

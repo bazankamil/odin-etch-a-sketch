@@ -60,6 +60,7 @@ body {
   --BORDER-COLOR: black;
   --CANVAS-HEIGHT: 0px;
   --CANVAS-WIDTH: 0px;
+  --PICKED-COLOR: blue;
 }
 
 /* || GENERAL STYLES */
@@ -75,10 +76,6 @@ body {
 
 /* COLORS */
 
-.blue {
-  background-color: blue;
-}
-
 /* BEM */
 
 /* TITLE */
@@ -86,6 +83,7 @@ body {
 .title {
   padding: 2rem;
   text-align: center;
+  color: aliceblue;
 }
 
 /* CONTAINER */
@@ -129,6 +127,16 @@ body {
   color: aliceblue;
   background-color: darkslategray;
   padding: 0.5rem;
+}
+
+.menu__picker-text {
+  color: aliceblue;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.menu__picker {
+  margin: auto;
 }
 
 /* ATTRIBUTION */
