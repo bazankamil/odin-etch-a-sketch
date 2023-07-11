@@ -129,10 +129,20 @@ body {
   padding: 0.5rem;
 }
 
-.menu__picker-text {
+.menu__picker-text,
+.menu__activeSize,
+.menu__sizeText {
   color: aliceblue;
   text-align: center;
   padding-top: 10px;
+}
+
+.menu__sizeSelect {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: aliceblue;
 }
 
 .menu__picker {

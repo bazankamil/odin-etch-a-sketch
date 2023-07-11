@@ -4,6 +4,8 @@ const button = document.querySelector(".button");
 let root = document.documentElement;
 const colorPicker = document.querySelector(".menu__picker");
 const eraser = document.querySelector(".menu__eraser");
+let eraserStatus = 0;
+const activeSize = document.querySelector(".menu__activeSize");
 
 //update color
 
@@ -40,15 +42,14 @@ container.addEventListener("mouseover", (e) => {
 
 //prompt
 
-button.addEventListener("click", (e) => {
-  let canvasSize = prompt("What size?");
+button.addEventListener("change", (e) => {
+  let canvasSize = e.target.value;
   container.innerHTML = "";
+  activeSize.textContent = e.target.value;
   makeCanvas(canvasSize);
 });
 
 //eraser
-
-let eraserStatus = 0;
 
 eraser.addEventListener("click", (e) => {
   if (eraserStatus == 0) {
@@ -68,9 +69,3 @@ eraser.addEventListener("click", (e) => {
   }
   console.log(eraserStatus);
 });
-//TODO:
-
-//kazde najechanie zmniejsza/zwieksza saturacje o 10% - tryb podobny, ale po najechaniu zmienia styl modyfikujac var i dodajac 10% pociemnienia
-//size jako input range
-
-//etch wewnatrz "okienka" tv albo innego obrazu

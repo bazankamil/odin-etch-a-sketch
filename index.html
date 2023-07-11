@@ -16,9 +16,19 @@
       <input type="color" value="#0000ff" class="menu__picker" /><span
         class="menu__picker-text"
         >Pick a color.</span
-      ><button class="menu__eraser">Eraser</button
-      ><button class="menu__darkener">Darkener</button
-      ><button class="button">Select Size</button>
+      ><button class="menu__eraser">Eraser</button>
+      <div class="menu__sizeSelect">
+        <input
+          type="range"
+          class="button"
+          name="size"
+          min="2"
+          max="100"
+        /><label for="size" class="menu__labelText">Select Size</label>
+      </div>
+      <span class="menu__sizeText"
+        >Active size:<span class="menu__activeSize"></span
+      ></span>
     </div>
     <div class="attribution">
       Coded by
