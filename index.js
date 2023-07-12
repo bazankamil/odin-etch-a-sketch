@@ -64,8 +64,10 @@ eraser.addEventListener("click", (e) => {
 eraser.addEventListener("click", (e) => {
   if (eraserStatus == 0) {
     e.target.style.color = "aliceblue";
+    e.target.style.border = "none";
   } else if (eraserStatus == 1) {
     e.target.style.color = "yellow";
+    e.target.style.border = "2px solid yellow";
   }
   console.log(eraserStatus);
 });
